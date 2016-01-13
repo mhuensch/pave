@@ -138,6 +138,7 @@ brew cask install font-source-code-pro
 # CONFIG
 
 echo -e "\nCopying Mackup config to Root Dir"
+# TODO: Fix this ref location!!
 cp -f  mackup/mackup.cfg ~/.mackup.cfg
 ln -s "$(pwd)/mackup/" ~/
 
