@@ -20,14 +20,6 @@ rm Alfred.zip
 mv "Alfred 2.app" /Applications
 rm -fr 'Alfred 2.app'
 
-installing "Mackup"
-brew install mackup
-
-
-
-
-# PACKAGE MANGEMENT
-
 installing "XCode"
 xcode-select --install
 
@@ -35,7 +27,6 @@ installing "Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # Update homebrew recipes
 brew update
-
 
 installing "Homebrew Cask"
 brew install caskroom/cask/brew-cask
@@ -49,6 +40,8 @@ installing "Homebrew Fonts"
 brew tap caskroom/fonts
 
 
+installing "Mackup"
+brew install mackup
 
 
 # APPLICATIONS
