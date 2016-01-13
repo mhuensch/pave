@@ -77,6 +77,10 @@ installing "Google Drive"
 brew cask install google-drive
 
 
+installing "XQuartz"
+brew cask install xquartz
+
+
 installing "Inkscape"
 brew cask install inkscape
 
