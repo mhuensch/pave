@@ -22,6 +22,7 @@ rm -fr 'Alfred 2.app'
 
 installing "XCode"
 xcode-select --install
+read -p "Press [Enter] after xcode is installed"
 
 installing "Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
