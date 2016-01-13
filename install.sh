@@ -28,6 +28,9 @@ brew install mackup
 
 # PACKAGE MANGEMENT
 
+installing "XCode"
+xcode-select --install
+
 installing "Homebrew"
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 # Update homebrew recipes
