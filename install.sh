@@ -145,5 +145,6 @@ echo "Restoring configuration using Mackup"
 mackup restore
 unlink ~/mackup
 
+
 brew cask cleanup
 brew cleanup
