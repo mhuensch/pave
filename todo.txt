@@ -8,7 +8,8 @@ Power settings? (plugged / unplugged)
 Mouse scroll direction (but not track pad?)
 Dark theme (after disable stability protection?)
 Move any additional config to Mackup? (alfred, etc.)
+Make unattended (office, atom, password, etc.)
 
-
+Config file (apps, settings, clean)?
 Combine scripts
 Update readme
