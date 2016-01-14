@@ -1,10 +1,8 @@
 "*":
   core: {}
   editor:
-    fontFamily: "Source Code Pro"
     invisibles: {}
-    showInvisibles: true
   "exception-reporting":
-    userId: "7c865033-8a2c-7cf8-a893-c38b361a90f8"
+    userId: "6f0f0b93-49b8-003f-695a-e0bd5c3140e2"
   welcome:
     showOnStartup: false

@@ -4,11 +4,18 @@ Reassign Caps lock
 
 Configure finder window
 Power settings? (plugged / unplugged)
-Mouse scroll direction (but not track pad?)
+Mouse scroll direction natural disabled (but not track pad?)
 Dark theme (after disable stability protection?)
 Move any additional config to Mackup? (alfred, etc.)
 Make unattended (office, atom, password, etc.)
 Disable Guest account
+List in save/open finder?
+Start applications to register them?
+Disable hotkey for spotlight - Set for alfred
+Figure out how to restore app settings
+
+
+
 
 Config file (apps, settings, clean)?
 Combine scripts

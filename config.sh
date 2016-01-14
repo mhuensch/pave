@@ -118,12 +118,12 @@ echo "Disable annoying sounds"
 user=`ls -l /dev/console | cut -d " " -f4`
 
 # Turn off "Play feedback when volume is changed
-su "${user}" -c 'defaults write -g com.apple.sound.beep.feedback -integer 0'
+"${user}" -c 'defaults write -g com.apple.sound.beep.feedback -integer 0'
 
 # Turn off "Play user interface sound effects
-su "${user}" -c 'defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0'
+"${user}" -c 'defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0'
 
 # Turn the volume down the alert volume
-su "${user}" -c 'defaults write com.apple.systemsound com.apple.sound.beep.volume -float 0'
+"${user}" -c 'defaults write com.apple.systemsound com.apple.sound.beep.volume -float 0'
 
 sudo shutdown -r now
