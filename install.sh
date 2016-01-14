@@ -9,8 +9,6 @@ echo "---------------------------------------"
 echo ""
 
 
-
-
 # UTILITIES
 
 installing "Alfred"
@@ -64,21 +62,12 @@ brew cask install dockertoolbox
 installing "GitHub Desktop"
 brew cask install github-desktop
 
-
-installing "Google Chrome"
-brew cask install google-chrome
-
-
-installing "Google Chrome Canary"
-brew cask install google-chrome-canary
+installing "Dropbox"
+brew cask install dropbox
 
 
 installing "Google Drive"
 brew cask install google-drive
-
-
-installing "XQuartz"
-brew cask install xquartz
 
 
 installing "Inkscape"
@@ -89,18 +78,6 @@ installing "iTerm"
 brew cask install iterm2
 
 
-installing "Karabiner"
-brew cask install karabiner
-
-
-installing "Keyboard Maestro"
-brew cask install keyboard-maestro
-
-
-installing "Lync"
-brew cask install microsoft-lync
-
-
 installing "Mongo Managment Studio"
 brew cask install mongo-management-studio
 
@@ -109,30 +86,14 @@ installing "Moom"
 brew cask install moom
 
 
-installing "Office"
-brew cask install microsoft-office
-
-
 installing "Seashore"
 brew cask install seashore
-
-
-installing "Spotify"
-brew cask install spotify
-
-
-installing "VLC"
-brew cask install vlc
-
-
 
 
 # FONTS
 
 installing "Source Code Pro FONT"
 brew cask install font-source-code-pro
-
-
 
 
 # CONFIG
