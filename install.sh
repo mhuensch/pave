@@ -8,7 +8,8 @@ echo "  RUNNING OSX INSTALL & CONFIGURATION"
 echo "---------------------------------------"
 echo ""
 
-
+# Ask for the administrator password upfront
+sudo -v
 
 
 # UTILITIES
@@ -52,6 +53,9 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 installing "Atom"
 brew cask install atom
 
+installing "Bartender"
+brew cask install bartender
+# SEE: https://www.macbartender.com/B2/system-item-setup/ to disable spotlight
 
 installing "CCleaner"
 brew cask install ccleaner

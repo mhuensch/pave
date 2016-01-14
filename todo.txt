@@ -1,0 +1,5 @@
+TODO:
+Reassign Caps lock
+-- in the meantime this can be disabled through system prefs / keyboard
+
+Configure finder window (confirm mackup)
