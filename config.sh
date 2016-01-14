@@ -106,7 +106,3 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 echo ""
 echo "Disabling local Time Machine backups"
 hash tmutil &> /dev/null && sudo tmutil disablelocal
-
-echo ""
-echo "Disable annoying backswipe in Chrome"
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
