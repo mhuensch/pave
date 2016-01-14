@@ -2,8 +2,7 @@ TODO:
 Reassign Caps lock
 -- in the meantime this can be disabled through system prefs / keyboard
 
-Configure finder window (confirm mackup)
-
+Configure finder window
 Power settings? (plugged / unplugged)
 Mouse scroll direction (but not track pad?)
 Dark theme (after disable stability protection?)
