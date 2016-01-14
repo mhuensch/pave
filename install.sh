@@ -89,6 +89,9 @@ brew cask install moom
 installing "Seashore"
 brew cask install seashore
 
+installing "RDP"
+brew cask install remote-desktop-connection
+
 
 # FONTS
 
