@@ -9,6 +9,7 @@ Mouse scroll direction (but not track pad?)
 Dark theme (after disable stability protection?)
 Move any additional config to Mackup? (alfred, etc.)
 Make unattended (office, atom, password, etc.)
+Disable Guest account
 
 Config file (apps, settings, clean)?
 Combine scripts
