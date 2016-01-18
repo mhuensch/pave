@@ -17,6 +17,8 @@ done
 # defaults write com.apple.systemuiserver menuExtras -array \
 #   "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
 
+echo ""
+echo "Disable spotlight"
 sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 
@@ -112,18 +114,27 @@ echo ""
 echo "Switch to dark mode"
 sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
 
+echo ""
+echo "Disable guest account"
+sudo defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
+sudo defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool NO
+
+echo ""
+echo "Set mouse scroll direction to normal"
+sudo defaults write -g com.apple.swipescrolldirection -bool FALSE
 
 echo ""
 echo "Disable annoying sounds"
 user=`ls -l /dev/console | cut -d " " -f4`
 
 # Turn off "Play feedback when volume is changed
-"${user}" -c 'defaults write -g com.apple.sound.beep.feedback -integer 0'
+sudo "${user}" -c 'defaults write -g com.apple.sound.beep.feedback -integer 0'
 
 # Turn off "Play user interface sound effects
-"${user}" -c 'defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0'
+sudo "${user}" -c 'defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0'
 
 # Turn the volume down the alert volume
-"${user}" -c 'defaults write com.apple.systemsound com.apple.sound.beep.volume -float 0'
+sudo "${user}" -c 'defaults write com.apple.systemsound com.apple.sound.beep.volume -float 0'
 
 sudo shutdown -r now

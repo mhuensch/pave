@@ -8,6 +8,14 @@ echo "  RUNNING OSX INSTALL & CONFIGURATION"
 echo "---------------------------------------"
 echo ""
 
+csrutil_status=$(csrutil status | awk '{print $5}')
+if [[ $csrutil_status = 'enabled.' ]]; then
+	echo "System Integrity Protection must be disabled before running this script."
+	echo "(see README.md for more information)"
+	return
+fi
+
+
 # Ask for the administrator password upfront
 sudo -v
 
@@ -41,9 +49,6 @@ brew tap caskroom/versions
 installing "Homebrew Fonts"
 brew tap caskroom/fonts
 
-
-installing "Mackup"
-brew install mackup
 
 
 # APPLICATIONS
@@ -137,20 +142,28 @@ installing "Source Code Pro FONT"
 brew cask install font-source-code-pro
 
 
-
-
-# CONFIG
-
-echo -e "\nCopying Mackup config to Root Dir"
-# TODO: Fix this ref location!!
-ln -s mackup/.mackup.cfg ~/.mackup.cfg
-ln -s "$(pwd)/mackup/" ~/
-
-
-echo "Restoring configuration using Mackup"
-mackup restore
-unlink ~/.mackup.cfg
-unlink ~/mackup
+# Remove unwanted applications
+installing "Removing unwanted applications"
+sudo rm -rf "/Applications/Calendar.app"
+sudo rm -rf "/Applications/Chess.app"
+sudo rm -rf "/Applications/Contacts.app"
+sudo rm -rf "/Applications/Dashboard.app"
+sudo rm -rf "/Applications/Dictionary.app"
+sudo rm -rf "/Applications/DVD Player.app"
+sudo rm -rf "/Applications/Game Center.app"
+sudo rm -rf "/Applications/iBooks.app"
+sudo rm -rf "/Applications/iTunes.app"
+sudo rm -rf "/Applications/Image Capture.app"
+sudo rm -rf "/Applications/Launchpad.app"
+sudo rm -rf "/Applications/Mail.app"
+sudo rm -rf "/Applications/Maps.app"
+sudo rm -rf "/Applications/Messages.app"
+sudo rm -rf "/Applications/Notes.app"
+sudo rm -rf "/Applications/Photo Booth.app"
+sudo rm -rf "/Applications/Photos.app"
+sudo rm -rf "/Applications/Reminders.app"
+sudo rm -rf "/Applications/Stickies.app"
+sudo rm -rf "/Applications/Time Machine.app"
 
 
 brew cask cleanup
