@@ -5,6 +5,6 @@ Script to setup new install of OSX
 mkdir -p /tmp/pave \
 && curl -L -o /tmp/pave/pave.zip "https://github.com/run00/brew/archive/master.zip" \
 && unzip -q -o -d /tmp/pave /tmp/pave/pave.zip \
-&& cd /tmp/pave/brew-master
+&& cd /tmp/pave/brew-master \
 && sh install.sh
 ```
