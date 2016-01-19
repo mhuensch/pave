@@ -1,11 +1,3 @@
 TODO:
 Reassign Caps lock
 -- in the meantime this can be disabled through system prefs / keyboard
-
-Start applications to register them?
-# open /Applications/Spotify.app
-
-
-Config file (apps, settings, clean)?
-Combine scripts
-Update readme
