@@ -112,14 +112,6 @@ installing "iTerm"
 brew cask install iterm2
 
 
-installing "Karabiner"
-brew cask install karabiner
-
-
-installing "Keyboard Maestro"
-brew cask install keyboard-maestro
-
-
 installing "Lync"
 brew cask install microsoft-lync
 
