@@ -132,6 +132,10 @@ installing "Seashore"
 brew cask install seashore
 
 
+installing "slack"
+brew cask install slack
+
+
 installing "Spotify"
 brew cask install spotify
 
@@ -158,7 +162,6 @@ sudo rm -rf "/Applications/Dictionary.app"
 sudo rm -rf "/Applications/DVD Player.app"
 sudo rm -rf "/Applications/Game Center.app"
 sudo rm -rf "/Applications/iBooks.app"
-sudo rm -rf "/Applications/iTunes.app"
 sudo rm -rf "/Applications/Image Capture.app"
 sudo rm -rf "/Applications/Launchpad.app"
 sudo rm -rf "/Applications/Mail.app"
