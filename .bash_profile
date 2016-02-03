@@ -31,8 +31,7 @@ function prompt {
 
 prompt
 
-alias drun='docker-compose run default'
-alias dember='docker-compose run default ember'
-alias dgen='docker-compose run default ember generate'
-alias dnpm='docker-compose run default npm'
-alias dbower='docker-compose run default bower'
+alias d-run='docker-compose run default'
+alias d-ember='docker-compose run default ember'
+alias d-npm='docker-compose run default npm'
+alias d-bower='docker-compose run default bower'
