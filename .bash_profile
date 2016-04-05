@@ -1,5 +1,6 @@
 [[ -s ~/.bashrc ]] && source ~/.bashrc
 
+# Bash Shell Colors
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
