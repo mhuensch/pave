@@ -24,8 +24,8 @@ if [[ $csrutil_status = 'enabled.' ]]; then
 fi
 
 
-# Ask for the administrator password upfront
-sudo -v
+installing "Bash profile"
+cp -a -f -n .bash_profile ~/
 
 
 # UTILITIES
@@ -69,6 +69,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 installing "Atom"
 brew cask install atom
+apm install `cat atom.packages.list`
 
 
 installing "Bartender"
@@ -100,20 +101,12 @@ installing "Google Drive"
 brew cask install google-drive
 
 
-installing "XQuartz"
-brew cask install xquartz
-
-
-installing "Inkscape"
-brew cask install inkscape
-
-
 installing "iTerm"
 brew cask install iterm2
 
 
-installing "Lync"
-brew cask install microsoft-lync
+installing "Sketch"
+brew cask install sketch
 
 
 installing "Mongo Managment Studio"
@@ -124,8 +117,8 @@ installing "Moom"
 brew cask install moom
 
 
-installing "Office"
-brew cask install microsoft-office
+installing "Node Version Manager"
+curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
 
 installing "Seashore"
@@ -154,7 +147,7 @@ brew cask install font-source-code-pro
 
 # Remove unwanted applications
 installing "Removing unwanted applications"
-sudo rm -rf "/Applications/Calendar.app"
+# sudo rm -rf "/Applications/Calendar.app"
 sudo rm -rf "/Applications/Chess.app"
 sudo rm -rf "/Applications/Contacts.app"
 sudo rm -rf "/Applications/Dashboard.app"
@@ -186,14 +179,12 @@ brew cleanup
 echo ""
 echo "Hide unwanted icons"
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
-  defaults write "${domain}" dontAutoLoad -array \
-    "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-    "/System/Library/CoreServices/Menu Extras/Volume.menu" \
-    "/System/Library/CoreServices/Menu Extras/User.menu"
+	defaults write "${domain}" dontAutoLoad -array \
+		"/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+		"/System/Library/CoreServices/Menu Extras/Volume.menu" \
+		"/System/Library/CoreServices/Menu Extras/User.menu"
 done
 
-# defaults write com.apple.systemuiserver menuExtras -array \
-#   "/System/Library/CoreServices/Menu Extras/Bluetooth.menu"
 
 echo ""
 echo "Disable spotlight"
@@ -316,13 +307,11 @@ sudo defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int
 sudo defaults write com.apple.systemsound com.apple.sound.beep.volume -float 0
 
 
-cp -a -f -n .bash_profile ~/
-
 
 secs=5
 while [ $secs -gt 0 ]; do
-   echo -ne "Restarting in: $secs\033[0K\r"
-   sleep 1
-   : $((secs--))
+	 echo -ne "Restarting in: $secs\033[0K\r"
+	 sleep 1
+	 : $((secs--))
 done
 sudo shutdown -r now
