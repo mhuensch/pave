@@ -1,3 +1,0 @@
-TODO:
-Reassign Caps lock
--- in the meantime this can be disabled through system prefs / keyboard
