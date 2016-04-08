@@ -5,7 +5,7 @@ Script to setup new install of OSX.  System Integrity Protection must be disable
 1. Restart
 2. As soon as black screen appears, hold down [command] + [R]
 3. Click Utilities > Terminal
-4. Run csrutil disable
+4. Run `csrutil disable`
 5. Run
 ```bash
 mkdir -p /tmp/pave \
@@ -15,7 +15,7 @@ mkdir -p /tmp/pave \
 && sh install.sh
 ```
 6. Follow steps 1-3 above
-7. Run csrutil enable
+7. Run `csrutil enable`
 
 
 To Backup Atom
