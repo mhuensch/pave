@@ -77,6 +77,10 @@ brew cask install bartender
 # SEE: https://www.macbartender.com/B2/system-item-setup/ to disable spotlight
 
 
+installing "Beyond Compare"
+brew cask install beyond-compare
+
+
 installing "CCleaner"
 brew cask install ccleaner
 
