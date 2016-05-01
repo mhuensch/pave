@@ -137,6 +137,10 @@ installing "Spotify"
 brew cask install spotify
 
 
+installing "Total Finder"
+brew cask install totalfinder
+
+
 installing "VLC"
 brew cask install vlc
 
