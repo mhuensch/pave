@@ -2,13 +2,6 @@ function installing() {
 	echo -e "\n\nInstalling: \033[0;32m$1\033[0m"
 }
 
-echo -e "\n"
-echo "---------------------------------------"
-echo "  RUNNING OSX INSTALL & CONFIGURATION"
-echo "---------------------------------------"
-echo ""
-
-
 csrutil_status=$(csrutil status | awk '{print $5}')
 if [[ $csrutil_status = 'enabled.' ]]; then
 	echo "System Integrity Protection must be disabled before running this script."
@@ -22,6 +15,12 @@ if [[ $csrutil_status = 'enabled.' ]]; then
 	echo " 7. Run csrutil enable"
 	return
 fi
+
+echo -e "\n"
+echo "---------------------------------------"
+echo "  RUNNING OSX INSTALL & CONFIGURATION"
+echo "---------------------------------------"
+echo ""
 
 
 installing "Bash profile"
@@ -77,36 +76,20 @@ brew cask install bartender
 # SEE: https://www.macbartender.com/B2/system-item-setup/ to disable spotlight
 
 
-installing "Beyond Compare"
-brew cask install beyond-compare
+installing "Kaleidoscope"
+brew cask install kaleidoscope
 
 
 installing "CCleaner"
 brew cask install ccleaner
 
 
-installing "Docker"
-brew cask install dockertoolbox
-
-
-installing "GitHub Desktop"
-brew cask install github-desktop
-
-
 installing "Google Chrome"
 brew cask install google-chrome
 
 
-installing "Google Chrome Canary"
-brew cask install google-chrome-canary
-
-
 installing "Google Drive"
 brew cask install google-drive
-
-
-installing "iTerm"
-brew cask install iterm2
 
 
 installing "Sketch"
@@ -125,24 +108,12 @@ installing "Node Version Manager"
 curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 
 
-installing "Seashore"
-brew cask install seashore
-
-
-installing "slack"
-brew cask install slack
-
-
 installing "Spotify"
 brew cask install spotify
 
 
 installing "Total Finder"
 brew cask install totalfinder
-
-
-installing "VLC"
-brew cask install vlc
 
 
 
@@ -152,28 +123,6 @@ brew cask install vlc
 installing "Source Code Pro FONT"
 brew cask install font-source-code-pro
 
-
-# Remove unwanted applications
-installing "Removing unwanted applications"
-# sudo rm -rf "/Applications/Calendar.app"
-sudo rm -rf "/Applications/Chess.app"
-sudo rm -rf "/Applications/Contacts.app"
-sudo rm -rf "/Applications/Dashboard.app"
-sudo rm -rf "/Applications/Dictionary.app"
-sudo rm -rf "/Applications/DVD Player.app"
-sudo rm -rf "/Applications/Game Center.app"
-sudo rm -rf "/Applications/iBooks.app"
-sudo rm -rf "/Applications/Image Capture.app"
-sudo rm -rf "/Applications/Launchpad.app"
-sudo rm -rf "/Applications/Mail.app"
-sudo rm -rf "/Applications/Maps.app"
-sudo rm -rf "/Applications/Messages.app"
-sudo rm -rf "/Applications/Notes.app"
-sudo rm -rf "/Applications/Photo Booth.app"
-sudo rm -rf "/Applications/Photos.app"
-sudo rm -rf "/Applications/Reminders.app"
-sudo rm -rf "/Applications/Stickies.app"
-sudo rm -rf "/Applications/Time Machine.app"
 
 
 brew cask cleanup
@@ -198,26 +147,13 @@ echo ""
 echo "Disable spotlight"
 sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
-
-echo ""
-echo "Expanding the save panel by default"
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
-
 echo ""
 echo "Automatically quit printer app once the print jobs complete"
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 
 echo ""
-echo "Saving to disk (not to iCloud) by default"
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-
-echo ""
 echo "Reveal IP address, hostname, OS version, etc. when clicking the clock in the login window"
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
-
 
 echo ""
 echo "Increasing sound quality for Bluetooth headphones/headsets"
@@ -227,27 +163,6 @@ echo ""
 echo "Enabling full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
-
-echo ""
-echo "Use list view in all Finder windows by default"
-defaults write com.apple.finder FXPreferredViewStyle Nlsv
-
-echo ""
-echo "Showing all filename extensions in Finder by default"
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-echo ""
-echo "Showing status bar in Finder by default"
-defaults write com.apple.finder ShowStatusBar -bool true
-
-echo ""
-echo "Allowing text selection in Quick Look/Preview in Finder by default"
-defaults write com.apple.finder QLEnableTextSelection -bool true
-
-echo ""
-echo "Displaying full POSIX path as Finder window title"
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-
 echo ""
 echo "Disabling the warning when changing a file extension"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -255,8 +170,6 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 echo ""
 echo "Avoiding the creation of .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-
 
 echo ""
 echo "Wipe all (default) app icons from the Dock"
@@ -290,16 +203,6 @@ sudo nvram SystemAudioVolume=%00
 echo ""
 echo "Switch to dark mode"
 sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
-
-echo ""
-echo "Disable guest account"
-sudo defaults write /Library/Preferences/com.apple.AppleFileServer guestAccess -bool NO
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server AllowGuestAccess -bool NO
-sudo defaults write /Library/Preferences/com.apple.loginwindow GuestEnabled -bool NO
-
-echo ""
-echo "Set mouse scroll direction to normal"
-sudo defaults write -g com.apple.swipescrolldirection -bool FALSE
 
 echo ""
 echo "Disable annoying sounds"
