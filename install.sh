@@ -58,6 +58,14 @@ brew tap caskroom/fonts
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+installing "Java"
+brew cask install java
+
+
+installing "Ant"
+brew install ant
+
+
 installing "Atom"
 brew cask install atom
 apm install `cat atom.packages.list`
