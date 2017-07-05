@@ -30,9 +30,12 @@ function prompt {
 prompt
 
 
-# Docker Commands
-alias dc='docker-compose'
-alias dc-run='docker-compose run default'
-alias dc-up='docker-compose up -d && docker-compose logs'
-alias dc-test='run ember test --serve --watcher polling'
-alias dc-clean='docker rm -f $(docker ps -a -q) && docker rmi -f $(docker images -q) && rm -fr node_modules && rm -fr bower_components && rm -fr dist && rm -fr tmp'
+PATH=$PATH:/usr/local/sbin
+
+
+export NVM_DIR="/Users/mhuensch/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+alias sf=clifs
+alias 'git:reset'='git reset --hard && git clean -fd'
